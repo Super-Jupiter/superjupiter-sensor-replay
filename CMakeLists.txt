@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(SuperJupiterSensorReplay VERSION 0.1.0 LANGUAGES CXX)
+project(SuperJupiterSensorReplay VERSION 0.1.1 LANGUAGES CXX)
 
 set(_superjupiter_sensor_replay_top_level OFF)
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
@@ -19,6 +19,9 @@ target_compile_features(SuperJupiterSensorReplay INTERFACE cxx_std_11)
 
 if(SUPERJUPITER_SENSOR_REPLAY_BUILD_TESTS)
   enable_testing()
+  add_executable(superjupiter-sensor-replay-review tests/review_regressions.cpp)
+  target_link_libraries(superjupiter-sensor-replay-review PRIVATE SuperJupiter::SensorReplay)
+  add_test(NAME superjupiter-sensor-replay-review COMMAND superjupiter-sensor-replay-review)
   add_executable(superjupiter-sensor-replay-tests tests/test.cpp)
   target_link_libraries(superjupiter-sensor-replay-tests PRIVATE SuperJupiter::SensorReplay)
   add_test(NAME superjupiter-sensor-replay-tests COMMAND superjupiter-sensor-replay-tests)

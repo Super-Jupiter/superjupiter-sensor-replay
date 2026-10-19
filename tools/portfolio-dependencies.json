@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "dependencies": [
+    {
+      "name": "SensorQuality",
+      "slug": "sensor-quality",
+      "namespace": "sensor_quality",
+      "package": "SuperJupiterSensorQuality",
+      "repository": "Super-Jupiter/superjupiter-sensor-quality",
+      "commit": "34007105c7486e54a0f6e4cb928043c9e0163596",
+      "headerSha256": "32072006232089ff34be18acf5d95af13d3f96412208972dc95a2b6f013fca7c",
+      "version": "0.2.1"
+    },
+    {
+      "name": "SampleWindow",
+      "slug": "sample-window",
+      "namespace": "sample_window",
+      "package": "SuperJupiterSampleWindow",
+      "repository": "Super-Jupiter/superjupiter-sample-window",
+      "commit": "b9157761a39c908c8b910cb6db4a099483ef0a4a",
+      "headerSha256": "2d75a2f3e5d842c787b0b5179a3f53f34b9327b41f4817601f2cd1753d6d37db",
+      "version": "0.1.1"
+    },
+    {
+      "name": "Calibration",
+      "slug": "calibration",
+      "namespace": "calibration",
+      "package": "SuperJupiterCalibration",
+      "repository": "Super-Jupiter/superjupiter-calibration",
+      "commit": "2937907662b3378b71889a2bdc0f6d543ad39ff5",
+      "headerSha256": "256a4f6f790183eaf81cfa7c45b81fc83ca89f218da638fd99d1dfa314b62a3f",
+      "version": "0.1.1"
+    },
+    {
+      "name": "TimeAnchor",
+      "slug": "time-anchor",
+      "namespace": "time_anchor",
+      "package": "SuperJupiterTimeAnchor",
+      "repository": "Super-Jupiter/superjupiter-time-anchor",
+      "commit": "43ac7cab653e92632e846bb6e29c08e0e6421f70",
+      "headerSha256": "6c32a33180dbbc563a6fe0f56bbbfc36bc7224c05c9cb5e2812558effc48a2eb",
+      "version": "0.1.1"
+    },
+    {
+      "name": "SignalFilter",
+      "slug": "signal-filter",
+      "namespace": "signal_filter",
+      "package": "SuperJupiterSignalFilter",
+      "repository": "Super-Jupiter/superjupiter-signal-filter",
+      "commit": "876f4ff82529e49fcdd4a214e8f656a67fffad4a",
+      "headerSha256": "82b3c743c1fecb8d8dd99c144bb1addae607e873c3d3acbb404239a53ba9d33b",
+      "version": "0.1.1"
+    },
+    {
+      "name": "Trend",
+      "slug": "trend",
+      "namespace": "trend",
+      "package": "SuperJupiterTrend",
+      "repository": "Super-Jupiter/superjupiter-trend",
+      "commit": "2bf5b7d81be9b09048b84cd2f126d60bfd2d0a84",
+      "headerSha256": "6560e8557e566dcbf05a4bd78e660750a502fef2e1e1b2a4c2e69758b5004fab",
+      "version": "0.1.1"
+    },
+    {
+      "name": "ThresholdEvents",
+      "slug": "threshold-events",
+      "namespace": "threshold_events",
+      "package": "SuperJupiterThresholdEvents",
+      "repository": "Super-Jupiter/superjupiter-threshold-events",
+      "commit": "890154803123e7b97d9e9abb2463e1449e4ee79e",
+      "headerSha256": "2569bc45e00a3dc921721eb04e0769bb2d47c8eaed1ba9483c846e57b3886f39",
+      "version": "0.1.1"
+    },
+    {
+      "name": "PulseMetrics",
+      "slug": "pulse-metrics",
+      "namespace": "pulse_metrics",
+      "package": "SuperJupiterPulseMetrics",
+      "repository": "Super-Jupiter/superjupiter-pulse-metrics",
+      "commit": "9cd2d3332010ceabcda38b896f66c3b32070da79",
+      "headerSha256": "d3dfd655109642aedd33bea98e24af1a6f35e88c1e6da473ab3740f7848ca019",
+      "version": "0.1.1"
+    },
+    {
+      "name": "TimeAggregate",
+      "slug": "time-aggregate",
+      "namespace": "time_aggregate",
+      "package": "SuperJupiterTimeAggregate",
+      "repository": "Super-Jupiter/superjupiter-time-aggregate",
+      "commit": "949af2c27b661b20bf938227fd46fd5283bdef51",
+      "headerSha256": "0955a4db21f7d880b0639cec7a864409e004c255a909331a5cc7e4e1e1ac358e",
+      "version": "0.1.1"
+    },
+    {
+      "name": "Integration",
+      "slug": "integration",
+      "namespace": "integration",
+      "package": "SuperJupiterIntegration",
+      "repository": "Super-Jupiter/superjupiter-integration",
+      "commit": "28b3e25de8fc5d502570b985f795e48ce53af5cc",
+      "headerSha256": "51713261c0fdadb65f60b300e31d5bc893f385a48b60a88e04b18c81b58803df",
+      "version": "0.1.1"
+    },
+    {
+      "name": "EventCapture",
+      "slug": "event-capture",
+      "namespace": "event_capture",
+      "package": "SuperJupiterEventCapture",
+      "repository": "Super-Jupiter/superjupiter-event-capture",
+      "commit": "c8a799adee8160309856045ad24d4b9317bf4014",
+      "headerSha256": "f0f8c8f4de33cf2f972d01b3eb272af924e98609b4bff80cae3eb1928d96f14c",
+      "version": "0.1.1"
+    },
+    {
+      "name": "ChannelAlign",
+      "slug": "channel-align",
+      "namespace": "channel_align",
+      "package": "SuperJupiterChannelAlign",
+      "repository": "Super-Jupiter/superjupiter-channel-align",
+      "commit": "cf422e37517d889ce959105a60ca618fb50fd00c",
+      "headerSha256": "1419ffc5ef7cb97675cbbe1e0a2e42b2c4a210d80e35a8d6b7455cb65a5c4a31",
+      "version": "0.1.1"
+    },
+    {
+      "name": "SensorAgreement",
+      "slug": "sensor-agreement",
+      "namespace": "sensor_agreement",
+      "package": "SuperJupiterSensorAgreement",
+      "repository": "Super-Jupiter/superjupiter-sensor-agreement",
+      "commit": "4f61957fe1f7d90a1b20beffc934ff0df08efd98",
+      "headerSha256": "3657208b9219e202aff466bf54d1baf3678bbc7e74ae5dd80a89268ee1484e7d",
+      "version": "0.1.1"
+    },
+    {
+      "name": "MachineState",
+      "slug": "machine-state",
+      "namespace": "machine_state",
+      "package": "SuperJupiterMachineState",
+      "repository": "Super-Jupiter/superjupiter-machine-state",
+      "commit": "e08e791477dbb52f927a8a65c53b95644c2cb336",
+      "headerSha256": "d7aa4944dc14c5cfce671251da8a31a2b657a33031d87f268b4839a05443717d",
+      "version": "0.1.1"
+    },
+    {
+      "name": "RecordJournal",
+      "slug": "record-journal",
+      "namespace": "record_journal",
+      "package": "SuperJupiterRecordJournal",
+      "repository": "Super-Jupiter/superjupiter-record-journal",
+      "commit": "da19f8c15c737fb3815336a639766fa272539b49",
+      "headerSha256": "3a15fba60a406cce776d6a0fef6aa2e9f3d2d3cafb862df21600fe6a1173bdcb",
+      "version": "0.1.1"
+    },
+    {
+      "name": "StoreForward",
+      "slug": "store-forward",
+      "namespace": "store_forward",
+      "package": "SuperJupiterStoreForward",
+      "repository": "Super-Jupiter/superjupiter-store-forward",
+      "commit": "2f4f7ea9f17862920011fefddcc4d818f11c0e4b",
+      "headerSha256": "4428e9f5875ab52c852c1993620217aac47b8aa0408dba3abd5f4d5b7bffc014",
+      "version": "0.1.1"
+    },
+    {
+      "name": "ConfigStore",
+      "slug": "config-store",
+      "namespace": "config_store",
+      "package": "SuperJupiterConfigStore",
+      "repository": "Super-Jupiter/superjupiter-config-store",
+      "commit": "b705d01468a5c5e105f3b1750e65eea708f96095",
+      "headerSha256": "3ae0792273bc23fa4c5d6162475a547c16c043f14e5647d3b847b176d45809a8",
+      "version": "0.1.1"
+    },
+    {
+      "name": "DeviceHealth",
+      "slug": "device-health",
+      "namespace": "device_health",
+      "package": "SuperJupiterDeviceHealth",
+      "repository": "Super-Jupiter/superjupiter-device-health",
+      "commit": "615722c5991b5bc9408927336c5d45d95b15380f",
+      "headerSha256": "2e5f375bdb8e4d4fea98225fac733df6199133052d025c676bd9affbc1b6a332",
+      "version": "0.1.1"
+    },
+    {
+      "name": "PowerBudget",
+      "slug": "power-budget",
+      "namespace": "power_budget",
+      "package": "SuperJupiterPowerBudget",
+      "repository": "Super-Jupiter/superjupiter-power-budget",
+      "commit": "5e66a873744c2f0f31661db6b5a03d0e358f7b78",
+      "headerSha256": "eb65fa3ad261ee1fc74ab170632e953aeff885d5e4296b70ebed4277a36c227a",
+      "version": "0.1.1"
+    }
+  ],
+  "hardwareValidation": "Pending"
+}

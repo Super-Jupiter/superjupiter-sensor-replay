@@ -2,32 +2,15 @@
 // Copyright (c) 2026 SuperJupiter
 #ifndef SUPERJUPITER_SENSOR_REPLAY_H
 #define SUPERJUPITER_SENSOR_REPLAY_H
-#if defined(__FAST_MATH__) || (defined(__FINITE_MATH_ONLY__) && __FINITE_MATH_ONLY__ > 0)
+#if defined(__FAST_MATH__) ||                                                  \
+    (defined(__FINITE_MATH_ONLY__) && __FINITE_MATH_ONLY__ > 0)
 #error "SuperJupiter requires IEEE non-finite checks; disable fast-math"
 #endif
-#include <float.h>
-#include <math.h>
 #include <stddef.h>
 #include <stdint.h>
-#define SUPERJUPITER_SENSOR_REPLAY_VERSION "0.1.0"
+#define SUPERJUPITER_SENSOR_REPLAY_VERSION "0.1.1"
 namespace superjupiter {
 namespace sensor_replay {
-
-namespace detail {
-inline bool finite(double value) { return value == value && value >= -DBL_MAX && value <= DBL_MAX; }
-inline double oneMinusExpNegative(double ratio) {
-  // Stable at small elapsed/tau without requiring AVR's unavailable expm1.
-  if (ratio < 0.01) {
-    double term = ratio, total = ratio;
-    for (unsigned n = 2; n <= 12; ++n) {
-      term *= -ratio / n;
-      total += term;
-    }
-    return total;
-  }
-  return 1 - ::exp(-ratio);
-}
-} // namespace detail
 
 struct Sample {
   double raw;
@@ -46,7 +29,15 @@ struct Output {
   uint16_t channel;
   size_t sourceIndex;
 };
-enum class Status { Ready, Waiting, SampleReady, Finished, InvalidConfig, NotStarted, InvalidTime };
+enum class Status {
+  Ready,
+  Waiting,
+  SampleReady,
+  Finished,
+  InvalidConfig,
+  NotStarted,
+  InvalidTime
+};
 class SensorReplay {
   const Sample *samples_;
   size_t count_;
@@ -56,9 +47,11 @@ class SensorReplay {
   bool started_, polled_;
 
 public:
-  SensorReplay(const Sample *samples, size_t count, const Fault *faults = 0, size_t faultCount = 0)
-      : samples_(samples), count_(count), faults_(faults), faultCount_(faultCount), cursor_(0),
-        start_(0), lastPoll_(0), started_(false), polled_(false) {}
+  SensorReplay(const Sample *samples, size_t count, const Fault *faults = 0,
+               size_t faultCount = 0)
+      : samples_(samples), count_(count), faults_(faults),
+        faultCount_(faultCount), cursor_(0), start_(0), lastPoll_(0),
+        started_(false), polled_(false) {}
   bool valid() const {
     if ((count_ && !samples_) || (faultCount_ && !faults_))
       return false;
@@ -67,8 +60,8 @@ public:
           (i && samples_[i].offsetMs < samples_[i - 1].offsetMs))
         return false;
     for (size_t i = 0; i < faultCount_; ++i) {
-      if (faults_[i].index >= count_ ||
-          (faults_[i].kind != FaultKind::Drop && faults_[i].kind != FaultKind::Replace))
+      if (faults_[i].index >= count_ || (faults_[i].kind != FaultKind::Drop &&
+                                         faults_[i].kind != FaultKind::Replace))
         return false;
       for (size_t j = 0; j < i; ++j)
         if (faults_[j].index == faults_[i].index)

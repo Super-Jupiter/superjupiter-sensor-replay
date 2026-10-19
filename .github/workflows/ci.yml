@@ -60,6 +60,10 @@ jobs:
           ./build/test-window
           "$CXX" -std=c++11 -Wall -Wextra -Werror -Isrc tests/namespace_isolation.cpp -o build/test-namespace
           ./build/test-namespace
+          "$CXX" -std=c++11 -Wall -Wextra -Wconversion -pedantic -Werror \
+            -fsanitize=address,undefined -fno-omit-frame-pointer -Isrc \
+            tests/review_regressions.cpp -o build/test-review
+          ./build/test-review
           if "$CXX" -std=c++11 -ffast-math -Isrc tests/namespace_isolation.cpp -o build/unsafe-math 2>build/unsafe-math.log; then
             echo "Expected fast-math to be rejected"; exit 1
           fi
@@ -141,3 +145,17 @@ jobs:
           python3 tools/package_zip.py "$RUNNER_TEMP/package.tar.gz" "$RUNNER_TEMP/package.zip"
           arduino-cli lib install --zip-path "$RUNNER_TEMP/package.zip"
           arduino-cli compile --fqbn "$FQBN" "$ARDUINO_DIRECTORIES_USER/libraries/SuperJupiterSensorReplay/examples/Minimal"
+
+  portfolio-integration:
+    name: Twenty-component integration (${{ matrix.compiler }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      matrix:
+        compiler: [g++, clang++]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify exact-source portfolio and CMake interoperability
+        run: python3 tools/verify_portfolio.py --compiler "${{ matrix.compiler }}"
