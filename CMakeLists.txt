@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(SuperJupiterSensorReplay VERSION 0.1.1 LANGUAGES CXX)
+project(SuperJupiterSensorReplay VERSION 0.1.2 LANGUAGES CXX)
 
 set(_superjupiter_sensor_replay_top_level OFF)
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)

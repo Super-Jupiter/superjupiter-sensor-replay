@@ -8,7 +8,7 @@
 #endif
 #include <stddef.h>
 #include <stdint.h>
-#define SUPERJUPITER_SENSOR_REPLAY_VERSION "0.1.1"
+#define SUPERJUPITER_SENSOR_REPLAY_VERSION "0.1.2"
 namespace superjupiter {
 namespace sensor_replay {
 

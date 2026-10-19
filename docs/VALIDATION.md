@@ -17,3 +17,8 @@ Adapters require separate application-specific failure injection and physical va
 ## Release 0.1.1
 
 Hardware validation pending. Independent review regressions run under GCC/Clang sanitizers, source/archive/relocated CMake consumers and the four-board compilation matrix. The exact release commit CI and release receipts are authoritative; a historical failure is not a current passing result. No physical device, sensor or storage power-loss test is claimed.
+
+
+## Release 0.1.2
+
+Refresh the exact twenty-component dependency lock to the corrected Integration0.1.2. Hardware validation pending.

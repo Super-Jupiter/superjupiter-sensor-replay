@@ -97,9 +97,9 @@
       "namespace": "integration",
       "package": "SuperJupiterIntegration",
       "repository": "Super-Jupiter/superjupiter-integration",
-      "commit": "28b3e25de8fc5d502570b985f795e48ce53af5cc",
-      "headerSha256": "51713261c0fdadb65f60b300e31d5bc893f385a48b60a88e04b18c81b58803df",
-      "version": "0.1.1"
+      "commit": "9c9fde674d475c3802a0ac0ee2ceb9efae238bee",
+      "headerSha256": "afba1d31b9164ef144ded4c2835f000a15a62de021211054f5a6aa16f56162d5",
+      "version": "0.1.2"
     },
     {
       "name": "EventCapture",

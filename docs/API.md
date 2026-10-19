@@ -39,3 +39,8 @@ Memory is bounded by template capacities and local arrays; storage/network adapt
 See [INTEROPERABILITY.md](INTEROPERABILITY.md) for units, timestamp horizons, numeric validity, payload constraints and storage synchronisation.
 
 - Removed unused duplicated math helpers and unnecessary includes.
+
+
+## Release 0.1.2
+
+Refresh the exact twenty-component dependency lock to the corrected Integration0.1.2. Hardware validation pending.
