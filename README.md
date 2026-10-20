@@ -1,5 +1,35 @@
 # SuperJupiter SensorReplay
 
+<!-- SUPERJUPITER-CONSOLIDATION-MIGRATION:START -->
+## Consolidated library available
+
+For new projects, start with **[SuperJupiter Sensor Toolkit](https://github.com/Super-Jupiter/superjupiter-sensor-toolkit)**. This standalone package and its published releases remain available. Existing installations need no change.
+
+If migrating with PlatformIO, replace the standalone dependency with:
+
+```ini
+lib_deps = superjupiter/SuperJupiterSensorToolkit@0.1.0
+```
+
+Replace this standalone include:
+
+```cpp
+#include <SuperJupiterSensorReplay.h>
+```
+
+with this consolidated include:
+
+```cpp
+#include <SuperJupiter/SensorToolkit/testing/SensorReplay.h>
+```
+
+The component namespace and behaviour are preserved from standalone **0.1.2**. If using an earlier version, review its API migration requirements first. Use one implementation of this component per application; do not mix standalone and consolidated copies.
+
+SensorReplay is an optional testing module. Use the explicit header above; it is excluded from the convenience header.
+
+See the [consolidated migration guide](https://github.com/Super-Jupiter/superjupiter-sensor-toolkit/blob/v0.1.0/docs/MIGRATION.md) and consolidated README for Arduino/CMake installation. **Hardware validation pending.**
+<!-- SUPERJUPITER-CONSOLIDATION-MIGRATION:END -->
+
 Deterministic timed sensor replay with explicit dropped and replaced readings.
 
 **Version 0.1.1: evolving preview. Hardware validation pending.**
